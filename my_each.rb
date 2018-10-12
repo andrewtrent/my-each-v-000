@@ -1,7 +1,8 @@
-def my_each(array) do
-  it = array.length
-  while it > 0 do
-    puts element
-    it--
+def my_each(array)
+  it = 0
+  while it < array.length
+    yield(array[it])
+    it++
   end
+  array
 end
